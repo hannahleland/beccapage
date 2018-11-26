@@ -11,7 +11,7 @@ body {
         "header"
         "quotebox"
         "link"
-        "link2"
+        "gallerybox"
         "meme"
         "footer";
 }
@@ -40,7 +40,7 @@ body {
 
 .quotebox {
     grid-area: quotebox;
-    min-height: 400px;
+    min-height: 180px;
 /*    background-color: #4a0b4a;*/
     margin-left: 10px;
     margin-right: 10px;
@@ -67,7 +67,7 @@ body {
     font-size: 1.2rem;
 }
 
-.linkbox1 {
+.linkbox {
     grid-area:link;
     min-height: 300px;
 /*    background-color: #ad84ad;*/
@@ -82,9 +82,9 @@ body {
 
 .title-h4 {
     grid-area: title;
-    color: #bf98bf;
+    color: #d1b0d1;
     text-align: center;
-    
+    padding-top: 10px;
 }
 
 .btn-group-vertical, .btn {
@@ -97,7 +97,7 @@ body {
 /*    background-color: #ad84ad;*/
     background-color: #4a0b4a;
     border:1px solid #c49cc4;
-    color:#bf98bf;
+    color:#d1b0d1;
 }
 
 .linkbtn:hover {
@@ -106,10 +106,54 @@ body {
 }
 
 
-.linkbox2 {
-    grid-area:link2;
-    min-height: 300px;
-    background-color: #d8bfd8;
+.gallerybox {
+    grid-area:gallerybox;
+    display:grid;
+    grid-template-columns: 4,1fr;
+    grid-template-rows: 2, 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+    ". pic1 pic2 ."
+    ". pic3 pic4 .";
+    min-height: 50px;
+    /* background-color: #d8bfd8; */
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 20rem;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid #d8bfd8;
+    border-radius: 0.25rem;
+    padding: 1rem;
+  }
+
+  .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+
+#pic1 {
+    grid-area:pic1;
+}
+
+#pic2 {
+    grid-area:pic2;
+}
+
+#pic3 {
+    grid-area:pic3;
+}
+
+#pic4 {
+    grid-area:pic4;
 }
 
 .memebox {
@@ -134,13 +178,14 @@ body {
 /* MEDIUM */
 @media only screen and (min-width: 768px) {
     #main {
-    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: repeat(3,1fr);
     grid-template-areas: 
         "header header header"
         "quote quote quote"
         "link link meme"
-        "link2 link2 meme"
-        "footer footer footer"; }
+        "gallerybox gallerybox meme"
+        "footer footer footer";  */
+    }
     
     .header {
     grid-area: header;
@@ -159,13 +204,14 @@ body {
 /* LARGE */
 @media only screen and (min-width: 992px) {
     #main {
-    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: repeat(3,1fr);
     grid-template-areas: 
         "header header header"
         "quote quote quote"
         "link link meme"
-        "link2 link2 meme"
-        "footer footer footer"; }
+        "gallerybox gallerybox meme"
+        "footer footer footer";  */
+    }
     
     .header {
     grid-area: header;
