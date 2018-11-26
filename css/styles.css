@@ -5,7 +5,7 @@ body {
 
 #main {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: 1,1fr;
     grid-gap:10px;
     grid-template-areas: 
         "header"
@@ -139,7 +139,8 @@ body {
         "header header header"
         "quote quote quote"
         "link link meme"
-        "link2 link2 meme"; }
+        "link2 link2 meme"
+        "footer footer footer"; }
     
     .header {
     grid-area: header;
@@ -163,7 +164,8 @@ body {
         "header header header"
         "quote quote quote"
         "link link meme"
-        "link2 link2 meme"; }
+        "link2 link2 meme"
+        "footer footer footer"; }
     
     .header {
     grid-area: header;
